@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Function Dictionary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="top-section">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="함수명 또는 기능을 입력하세요 (예: ABS, 변환)...">
+        </div>
+        <nav id="alphabet-bar">
+            <!-- JavaScript will populate this -->
+        </nav>
+    </header>
+
+    <main>
+        <section id="middle-section" class="favorites-section hidden">
+            <h2>⭐ 즐겨찾기</h2>
+            <div class="table-wrapper">
+                <table id="favorites-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>⭐</th>
+                            <th>함수명</th>
+                            <th>기능 설명</th>
+                        </tr>
+                    </thead>
+                    <tbody id="favorites-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="bottom-section" class="all-functions-section">
+            <h2>📜 SQL 함수 목록</h2>
+            <div id="accordion-container">
+                <!-- JavaScript will populate categorized tables here -->
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" class="fab" aria-label="맨 위로">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z" />
+        </svg>
+    </button>
+
+    <div id="function-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h3 id="modal-title">함수 상세</h3>
+            <p id="modal-desc" class="modal-description"></p>
+            <div class="modal-body">
+                <div class="detail-group">
+                    <h4>📝 예시 쿼리</h4>
+                    <pre><code id="example-query"></code></pre>
+                </div>
+                <div class="detail-group">
+                    <h4>📊 예시 결과</h4>
+                    <div id="example-result" class="result-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

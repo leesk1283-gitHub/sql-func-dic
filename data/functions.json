@@ -1,0 +1,1052 @@
+[
+    {
+        "id": 1,
+        "name": "ABS",
+        "description": "숫자의 절대값을 반환합니다.",
+        "example_query": "SELECT ABS(-10);",
+        "example_result": "| ABS(-10) |\n| :--- |\n| 10 |"
+    },
+    {
+        "id": 2,
+        "name": "ACOS",
+        "description": "입력값의 역코사인(아크 코사인)을 계산합니다.",
+        "example_query": "SELECT ACOS(0.5);",
+        "example_result": "| ACOS(0.5) |\n| :--- |\n| 1.0471975512 |"
+    },
+    {
+        "id": 3,
+        "name": "ACOSH",
+        "description": "입력값의 역쌍곡 코사인(아크 쌍곡선 코사인)을 계산합니다.",
+        "example_query": "SELECT ACOSH(1);",
+        "example_result": "| ACOSH(1) |\n| :--- |\n| 0 |"
+    },
+    {
+        "id": 4,
+        "name": "ADD_MONTHS",
+        "description": "날짜에 지정된 개월 수를 더하거나 뺍니다.",
+        "example_query": "SELECT ADD_MONTHS('2025-01-01', 3);",
+        "example_result": "| Result |\n| :--- |\n| 2025-04-01 |"
+    },
+    {
+        "id": 5,
+        "name": "ANY_VALUE",
+        "description": "그룹 내 임의의 값을 반환합니다.",
+        "example_query": "SELECT ANY_VALUE(name) FROM employees;",
+        "example_result": "| ANY_VALUE(name) |\n| :--- |\n| John Doe |"
+    },
+    {
+        "id": 6,
+        "name": "ARRAY_AGG",
+        "description": "입력 값을 포함하는 배열을 반환합니다.",
+        "example_query": "SELECT ARRAY_AGG(id) FROM table;",
+        "example_result": "| ARRAY_AGG(id) |\n| :--- |\n| [1, 2, 3] |"
+    },
+    {
+        "id": 7,
+        "name": "ARRAY_CONSTRUCT",
+        "description": "입력값으로부터 새로운 배열을 생성합니다.",
+        "example_query": "SELECT ARRAY_CONSTRUCT(1, 2, 'three');",
+        "example_result": "| Result |\n| :--- |\n| [1, 2, \"three\"] |"
+    },
+    {
+        "id": 8,
+        "name": "ARRAY_SIZE",
+        "description": "배열의 크기(요소 수)를 반환합니다.",
+        "example_query": "SELECT ARRAY_SIZE(ARRAY_CONSTRUCT(1, 2));",
+        "example_result": "| Result |\n| :--- |\n| 2 |"
+    },
+    {
+        "id": 9,
+        "name": "AS_ARRAY",
+        "description": "값을 배열로 변환합니다.",
+        "example_query": "SELECT AS_ARRAY(PARSE_JSON('[1, 2]'));",
+        "example_result": "| Result |\n| :--- |\n| [1, 2] |"
+    },
+    {
+        "id": 10,
+        "name": "ASCII",
+        "description": "문자열의 첫 번째 문자에 대한 ASCII 코드 값을 반환합니다.",
+        "example_query": "SELECT ASCII('A');",
+        "example_result": "| ASCII('A') |\n| :--- |\n| 65 |"
+    },
+    {
+        "id": 11,
+        "name": "ASIN",
+        "description": "입력값의 역사인(아크 사인)을 계산합니다.",
+        "example_query": "SELECT ASIN(1);",
+        "example_result": "| ASIN(1) |\n| :--- |\n| 1.5707963268 |"
+    },
+    {
+        "id": 12,
+        "name": "ATAN",
+        "description": "입력값의 역탄젠트(아크 탄젠트)를 계산합니다.",
+        "example_query": "SELECT ATAN(1);",
+        "example_result": "| ATAN(1) |\n| :--- |\n| 0.7853981634 |"
+    },
+    {
+        "id": 13,
+        "name": "AVG",
+        "description": "그룹 내 값의 평균을 반환합니다.",
+        "example_query": "SELECT AVG(score) FROM students;",
+        "example_result": "| AVG(score) |\n| :--- |\n| 85.5 |"
+    },
+    {
+        "id": 14,
+        "name": "BITAND",
+        "description": "두 정수에 대해 비트 AND 연산을 수행합니다.",
+        "example_query": "SELECT BITAND(12, 10);",
+        "example_result": "| Result |\n| :--- |\n| 8 |"
+    },
+    {
+        "id": 15,
+        "name": "BITOR",
+        "description": "두 정수에 대해 비트 OR 연산을 수행합니다.",
+        "example_query": "SELECT BITOR(12, 10);",
+        "example_result": "| Result |\n| :--- |\n| 14 |"
+    },
+    {
+        "id": 16,
+        "name": "BOOLAND_AGG",
+        "description": "그룹 내 모든 부울 값에 대해 논리 AND 연산을 수행합니다.",
+        "example_query": "SELECT BOOLAND_AGG(is_active) FROM users;",
+        "example_result": "| Result |\n| :--- |\n| FALSE |"
+    },
+    {
+        "id": 17,
+        "name": "CASE",
+        "description": "조건에 따라 다른 결과를 반환합니다.",
+        "example_query": "SELECT CASE WHEN val > 0 THEN 'POS' ELSE 'NEG' END;",
+        "example_result": "| Result |\n| :--- |\n| POS |"
+    },
+    {
+        "id": 18,
+        "name": "CAST",
+        "description": "데이터 타입을 다른 타입으로 변환합니다.",
+        "example_query": "SELECT CAST('123' AS INT);",
+        "example_result": "| Result |\n| :--- |\n| 123 |"
+    },
+    {
+        "id": 19,
+        "name": "CEIL",
+        "description": "입력값보다 크거나 같은 최소 정수(올림)를 반환합니다.",
+        "example_query": "SELECT CEIL(25.75);",
+        "example_result": "| CEIL(25.75) |\n| :--- |\n| 26 |"
+    },
+    {
+        "id": 20,
+        "name": "CHARINDEX",
+        "description": "문자열 내에서 특정 문자열이 시작되는 위치를 반환합니다.",
+        "example_query": "SELECT CHARINDEX('target', 'find the target');",
+        "example_result": "| Position |\n| :--- |\n| 10 |"
+    },
+    {
+        "id": 21,
+        "name": "CHECK_JSON",
+        "description": "문자열이 유효한 JSON인지 확인합니다.",
+        "example_query": "SELECT CHECK_JSON('{\"a\":1}');",
+        "example_result": "| Result |\n| :--- |\n| NULL (if valid) |"
+    },
+    {
+        "id": 22,
+        "name": "COALESCE",
+        "description": "목록에서 첫 번째로 Null이 아닌 값을 반환합니다.",
+        "example_query": "SELECT COALESCE(NULL, 'A', 'B');",
+        "example_result": "| Result |\n| :--- |\n| A |"
+    },
+    {
+        "id": 23,
+        "name": "CONCAT",
+        "description": "둘 이상의 문자열을 연결합니다.",
+        "example_query": "SELECT CONCAT('Hello', ' ', 'World');",
+        "example_result": "| Result |\n| :--- |\n| Hello World |"
+    },
+    {
+        "id": 24,
+        "name": "CONTAINS",
+        "description": "하나의 문자열이 다른 문자열을 포함하고 있는지 여부를 반환합니다.",
+        "example_query": "SELECT CONTAINS('Snowflake', 'Snow');",
+        "example_result": "| Result |\n| :--- |\n| TRUE |"
+    },
+    {
+        "id": 25,
+        "name": "CORR",
+        "description": "두 변수 간의 피어슨 상관 계수를 계산합니다.",
+        "example_query": "SELECT CORR(y, x) FROM table;",
+        "example_result": "| Result |\n| :--- |\n| 0.85 |"
+    },
+    {
+        "id": 26,
+        "name": "COS",
+        "description": "입력값의 코사인 값을 계산합니다.",
+        "example_query": "SELECT COS(0);",
+        "example_result": "| COS(0) |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 27,
+        "name": "COSH",
+        "description": "입력값의 쌍곡 코사인 값을 계산합니다.",
+        "example_query": "SELECT COSH(0);",
+        "example_result": "| Result |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 28,
+        "name": "COUNT",
+        "description": "그룹 내 행의 개수를 반환합니다.",
+        "example_query": "SELECT COUNT(*) FROM table_name;",
+        "example_result": "| COUNT(*) |\n| :--- |\n| 500 |"
+    },
+    {
+        "id": 29,
+        "name": "COUNT_IF",
+        "description": "조건이 참인 행의 개수를 반환합니다.",
+        "example_query": "SELECT COUNT_IF(score > 90) FROM results;",
+        "example_result": "| Result |\n| :--- |\n| 15 |"
+    },
+    {
+        "id": 30,
+        "name": "COVAR_POP",
+        "description": "인구 공분산을 계산합니다.",
+        "example_query": "SELECT COVAR_POP(y, x) FROM table;",
+        "example_result": "| Result |\n| :--- |\n| 12.5 |"
+    },
+    {
+        "id": 31,
+        "name": "CURRENT_DATE",
+        "description": "시스템의 현재 날짜를 반환합니다.",
+        "example_query": "SELECT CURRENT_DATE();",
+        "example_result": "| CURRENT_DATE() |\n| :--- |\n| 2025-12-24 |"
+    },
+    {
+        "id": 32,
+        "name": "CURRENT_REGION",
+        "description": "현재 세션의 리전 이름을 반환합니다.",
+        "example_query": "SELECT CURRENT_REGION();",
+        "example_result": "| Result |\n| :--- |\n| AWS_US_WEST_2 |"
+    },
+    {
+        "id": 33,
+        "name": "CURRENT_ROLE",
+        "description": "현재 사용 중인 역할을 반환합니다.",
+        "example_query": "SELECT CURRENT_ROLE();",
+        "example_result": "| Result |\n| :--- |\n| ACCOUNTADMIN |"
+    },
+    {
+        "id": 34,
+        "name": "CURRENT_TIMESTAMP",
+        "description": "시스템의 현재 날짜와 시간을 반환합니다.",
+        "example_query": "SELECT CURRENT_TIMESTAMP();",
+        "example_result": "| CURRENT_TIMESTAMP() |\n| :--- |\n| 2025-12-24 16:20:00 |"
+    },
+    {
+        "id": 35,
+        "name": "CURRENT_USER",
+        "description": "현재 로그인한 사용자 이름을 반환합니다.",
+        "example_query": "SELECT CURRENT_USER();",
+        "example_result": "| Result |\n| :--- |\n| ADMIN |"
+    },
+    {
+        "id": 36,
+        "name": "DATEADD",
+        "description": "날짜/시간 값에 지정된 시간 간격을 더합니다.",
+        "example_query": "SELECT DATEADD(day, 7, '2025-01-01');",
+        "example_result": "| Result |\n| :--- |\n| 2025-01-08 |"
+    },
+    {
+        "id": 37,
+        "name": "DATEDIFF",
+        "description": "두 날짜/시간 값 사이의 기간 차이를 반환합니다.",
+        "example_query": "SELECT DATEDIFF('day', '2025-01-01', '2025-01-10');",
+        "example_result": "| Diff |\n| :--- |\n| 9 |"
+    },
+    {
+        "id": 38,
+        "name": "DATE_PART",
+        "description": "날짜 또는 시간의 특정 부분을 추출합니다.",
+        "example_query": "SELECT DATE_PART(year, '2025-01-01');",
+        "example_result": "| Result |\n| :--- |\n| 2025 |"
+    },
+    {
+        "id": 39,
+        "name": "DATE_TRUNC",
+        "description": "날짜 또는 시간 값을 지정된 정밀도(예: day, month)로 자릅니다.",
+        "example_query": "SELECT DATE_TRUNC('month', '2025-01-15');",
+        "example_result": "| Result |\n| :--- |\n| 2025-01-01 |"
+    },
+    {
+        "id": 40,
+        "name": "DAYNAME",
+        "description": "지정된 날짜의 요일 이름을 반환합니다.",
+        "example_query": "SELECT DAYNAME('2025-01-01');",
+        "example_result": "| Result |\n| :--- |\n| Wed |"
+    },
+    {
+        "id": 41,
+        "name": "DECODE",
+        "description": "조건에 따라 값을 변환합니다 (Oracle 스타일).",
+        "example_query": "SELECT DECODE(status, 'P', 'Paid', 'Unpaid') FROM orders;",
+        "example_result": "| Result |\n| :--- |\n| Paid |"
+    },
+    {
+        "id": 42,
+        "name": "DEGREES",
+        "description": "라디안을 도(degrees) 단위로 변환합니다.",
+        "example_query": "SELECT DEGREES(PI());",
+        "example_result": "| Result |\n| :--- |\n| 180 |"
+    },
+    {
+        "id": 43,
+        "name": "DENSE_RANK",
+        "description": "순위 사이의 간격 없이 순위를 반환합니다 (윈도우 함수).",
+        "example_query": "SELECT DENSE_RANK() OVER (ORDER BY score DESC) FROM results;",
+        "example_result": "| Result |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 44,
+        "name": "DIV0",
+        "description": "나눗셈을 수행하되, 분모가 0인 경우 0을 반환합니다.",
+        "example_query": "SELECT DIV0(10, 0);",
+        "example_result": "| DIV0(10, 0) |\n| :--- |\n| 0 |"
+    },
+    {
+        "id": 45,
+        "name": "EDITDISTANCE",
+        "description": "두 문자열 간의 편집 거리(리벤슈타인 거리)를 계산합니다.",
+        "example_query": "SELECT EDITDISTANCE('kitten', 'sitting');",
+        "example_result": "| Result |\n| :--- |\n| 3 |"
+    },
+    {
+        "id": 46,
+        "name": "ENDS_WITH",
+        "description": "문자열이 특정 문자열로 끝나는지 여부를 반환합니다.",
+        "example_query": "SELECT ENDS_WITH('Snowflake', 'flake');",
+        "example_result": "| Result |\n| :--- |\n| TRUE |"
+    },
+    {
+        "id": 47,
+        "name": "EXP",
+        "description": "e(자연 로그의 밑)의 입력값 거듭제곱을 반환합니다.",
+        "example_query": "SELECT EXP(1);",
+        "example_result": "| EXP(1) |\n| :--- |\n| 2.7182818284 |"
+    },
+    {
+        "id": 48,
+        "name": "EXTRACT",
+        "description": "날짜 또는 타임스탬프에서 특정 구성 요소를 추출합니다.",
+        "example_query": "SELECT EXTRACT(month FROM '2025-12-24');",
+        "example_result": "| Result |\n| :--- |\n| 12 |"
+    },
+    {
+        "id": 49,
+        "name": "FIRST_VALUE",
+        "description": "정렬된 그룹 내의 첫 번째 값을 반환합니다 (윈도우 함수).",
+        "example_query": "SELECT FIRST_VALUE(val) OVER (ORDER BY id) FROM table;",
+        "example_result": "| Result |\n| :--- |\n| FirstVal |"
+    },
+    {
+        "id": 50,
+        "name": "FLATTEN",
+        "description": "반구조화된 데이터(배열, 객체)를 행 집합으로 변환합니다.",
+        "example_query": "SELECT * FROM TABLE(FLATTEN(input => [1, 2]));",
+        "example_result": "| Value |\n| :--- |\n| 1 |\n| 2 |"
+    },
+    {
+        "id": 51,
+        "name": "FLOOR",
+        "description": "입력값보다 작거나 같은 최대 정수(내림)를 반환합니다.",
+        "example_query": "SELECT FLOOR(25.75);",
+        "example_result": "| FLOOR(25.75) |\n| :--- |\n| 25 |"
+    },
+    {
+        "id": 52,
+        "name": "GET",
+        "description": "반구조화 데이터에서 특정 경로의 값을 추출합니다.",
+        "example_query": "SELECT GET(PARSE_JSON('{\"a\":1}'), 'a');",
+        "example_result": "| Result |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 53,
+        "name": "GREATEST",
+        "description": "목록에서 가장 큰 값을 반환합니다.",
+        "example_query": "SELECT GREATEST(10, 20, 30);",
+        "example_result": "| Result |\n| :--- |\n| 30 |"
+    },
+    {
+        "id": 54,
+        "name": "GROUPING",
+        "description": "GROUP BY 절의 결과에 대한 집계 수준을 나타냅니다.",
+        "example_query": "SELECT city, GROUPING(city) FROM sales GROUP BY ROLLUP(city);",
+        "example_result": "| City | GI |\n| :--- | :--- |\n| SEOUL | 0 |\n| NULL | 1 |"
+    },
+    {
+        "id": 55,
+        "name": "HASH",
+        "description": "입력값에 대한 해시 값을 반환합니다.",
+        "example_query": "SELECT HASH('data');",
+        "example_result": "| HashValue |\n| :--- |\n| 1234567890 |"
+    },
+    {
+        "id": 56,
+        "name": "HAVING",
+        "description": "그룹화된 결과에 대한 조건을 지정합니다 (주로 SELECT 절과 함께 사용).",
+        "example_query": "SELECT dept, SUM(sal) FROM emp GROUP BY dept HAVING SUM(sal) > 10000;",
+        "example_result": "| Dept | Sum |\n| :--- | :--- |\n| IT | 15000 |"
+    },
+    {
+        "id": 57,
+        "name": "IFF",
+        "description": "조건이 참이면 첫 번째 값을, 거짓이면 두 번째 값을 반환합니다.",
+        "example_query": "SELECT IFF(1=1, 'Yes', 'No');",
+        "example_result": "| Result |\n| :--- |\n| Yes |"
+    },
+    {
+        "id": 58,
+        "name": "IFNULL",
+        "description": "값이 NULL인 경우 지정된 다른 값으로 대체합니다.",
+        "example_query": "SELECT IFNULL(NULL, 'N/A');",
+        "example_result": "| Result |\n| :--- |\n| N/A |"
+    },
+    {
+        "id": 59,
+        "name": "ILIKE",
+        "description": "대소문자를 구분하지 않고 패턴 매칭을 수행합니다 (SQL 표준 LIKE의 확장).",
+        "example_query": "SELECT 'apple' ILIKE 'A%';",
+        "example_result": "| Result |\n| :--- |\n| TRUE |"
+    },
+    {
+        "id": 60,
+        "name": "INITCAP",
+        "description": "각 단어의 첫 글자를 대문자로 변환합니다.",
+        "example_query": "SELECT INITCAP('hello world');",
+        "example_result": "| Result |\n| :--- |\n| Hello World |"
+    },
+    {
+        "id": 61,
+        "name": "INSTR",
+        "description": "문자열 내에서 특정 부분 문자열의 위치를 검색합니다.",
+        "example_query": "SELECT INSTR('Corporation', 'or');",
+        "example_result": "| Pos |\n| :--- |\n| 2 |"
+    },
+    {
+        "id": 62,
+        "name": "ISNULL",
+        "description": "값이 NULL인지 여부를 확인합니다.",
+        "example_query": "SELECT ISNULL(NULL);",
+        "example_result": "| Result |\n| :--- |\n| TRUE |"
+    },
+    {
+        "id": 63,
+        "name": "JSON_EXTRACT_PATH_TEXT",
+        "description": "JSON 문자열에서 지정된 경로의 텍스트 값을 추출합니다.",
+        "example_query": "SELECT JSON_EXTRACT_PATH_TEXT('{\"a\":{\"b\":\"val\"}}', 'a.b');",
+        "example_result": "| Result |\n| :--- |\n| val |"
+    },
+    {
+        "id": 64,
+        "name": "LAG",
+        "description": "현재 행보다 이전 위치에 있는 행의 값을 반환합니다 (윈도우 함수).",
+        "example_query": "SELECT LAG(price) OVER (ORDER BY date) FROM sales;",
+        "example_result": "| Result |\n| :--- |\n| 1000 |"
+    },
+    {
+        "id": 65,
+        "name": "LAST_DAY",
+        "description": "월의 마지막 날짜를 반환합니다.",
+        "example_query": "SELECT LAST_DAY('2025-02-01');",
+        "example_result": "| Result |\n| :--- |\n| 2025-02-28 |"
+    },
+    {
+        "id": 66,
+        "name": "LAST_VALUE",
+        "description": "정렬된 그룹 내의 마지막 값을 반환합니다 (윈도우 함수).",
+        "example_query": "SELECT LAST_VALUE(val) OVER (ORDER BY id) FROM table;",
+        "example_result": "| Result |\n| :--- |\n| LastVal |"
+    },
+    {
+        "id": 67,
+        "name": "LEAD",
+        "description": "현재 행보다 다음 위치에 있는 행의 값을 반환합니다 (윈도우 함수).",
+        "example_query": "SELECT LEAD(price) OVER (ORDER BY date) FROM sales;",
+        "example_result": "| Result |\n| :--- |\n| 2000 |"
+    },
+    {
+        "id": 68,
+        "name": "LEAST",
+        "description": "목록에서 가장 작은 값을 반환합니다.",
+        "example_query": "SELECT LEAST(10, 20, 30);",
+        "example_result": "| Result |\n| :--- |\n| 10 |"
+    },
+    {
+        "id": 69,
+        "name": "LEFT",
+        "description": "문자열의 왼쪽에서 지정된 개수만큼의 문자를 반환합니다.",
+        "example_query": "SELECT LEFT('Snowflake', 4);",
+        "example_result": "| Result |\n| :--- |\n| Snow |"
+    },
+    {
+        "id": 70,
+        "name": "LENGTH",
+        "description": "문자열의 길이를 반환합니다.",
+        "example_query": "SELECT LENGTH('SQL');",
+        "example_result": "| LENGTH |\n| :--- |\n| 3 |"
+    },
+    {
+        "id": 71,
+        "name": "LISTAGG",
+        "description": "그룹 내의 문자열 값들을 하나의 문자열로 결합합니다.",
+        "example_query": "SELECT LISTAGG(name, ', ') FROM employees;",
+        "example_result": "| Result |\n| :--- |\n| Amy, Bob, Tom |"
+    },
+    {
+        "id": 72,
+        "name": "LN",
+        "description": "입력값의 자연 로그를 계산합니다.",
+        "example_query": "SELECT LN(2.718);",
+        "example_result": "| LN |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 73,
+        "name": "LOG",
+        "description": "지정된 밑을 사용하여 로그 값을 계산합니다.",
+        "example_query": "SELECT LOG(10, 100);",
+        "example_result": "| LOG |\n| :--- |\n| 2 |"
+    },
+    {
+        "id": 74,
+        "name": "LOWER",
+        "description": "문자열을 소문자로 변환합니다.",
+        "example_query": "SELECT LOWER('MySQL');",
+        "example_result": "| Result |\n| :--- |\n| mysql |"
+    },
+    {
+        "id": 75,
+        "name": "LPAD",
+        "description": "지정된 길이가 될 때까지 문자열의 왼쪽을 특정 문자로 채웁니다.",
+        "example_query": "SELECT LPAD('123', 5, '0');",
+        "example_result": "| Result |\n| :--- |\n| 00123 |"
+    },
+    {
+        "id": 76,
+        "name": "LTRIM",
+        "description": "문자열 왼쪽의 공백을 제거합니다.",
+        "example_query": "SELECT LTRIM('  Text');",
+        "example_result": "| Result |\n| :--- |\n| Text |"
+    },
+    {
+        "id": 77,
+        "name": "MAX",
+        "description": "그룹 내 최대값을 반환합니다.",
+        "example_query": "SELECT MAX(price) FROM products;",
+        "example_result": "| MAX |\n| :--- |\n| 50000 |"
+    },
+    {
+        "id": 78,
+        "name": "MD5",
+        "description": "입력값에 대한 MD5 해시 값을 반환합니다.",
+        "example_query": "SELECT MD5('data');",
+        "example_result": "| Result |\n| :--- |\n| 8d777f385d3dfec8... |"
+    },
+    {
+        "id": 79,
+        "name": "MEDIAN",
+        "description": "그룹 내 값의 중앙값을 반환합니다.",
+        "example_query": "SELECT MEDIAN(score) FROM students;",
+        "example_result": "| MEDIAN |\n| :--- |\n| 80 |"
+    },
+    {
+        "id": 80,
+        "name": "MIN",
+        "description": "그룹 내 최소값을 반환합니다.",
+        "example_query": "SELECT MIN(price) FROM products;",
+        "example_result": "| MIN |\n| :--- |\n| 1500 |"
+    },
+    {
+        "id": 81,
+        "name": "MOD",
+        "description": "나눗셈의 나머지를 반환합니다.",
+        "example_query": "SELECT MOD(10, 3);",
+        "example_result": "| Result |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 82,
+        "name": "MONTHNAME",
+        "description": "지정된 날짜의 월 이름을 반환합니다.",
+        "example_query": "SELECT MONTHNAME('2025-01-01');",
+        "example_result": "| Result |\n| :--- |\n| Jan |"
+    },
+    {
+        "id": 83,
+        "name": "NEXT_DAY",
+        "description": "지정된 요일의 다음 날짜를 반환합니다.",
+        "example_query": "SELECT NEXT_DAY('2025-01-01', 'Friday');",
+        "example_result": "| Result |\n| :--- |\n| 2025-01-03 |"
+    },
+    {
+        "id": 84,
+        "name": "NOW",
+        "description": "현재 날짜와 시간을 반환합니다.",
+        "example_query": "SELECT NOW();",
+        "example_result": "| NOW() |\n| :--- |\n| 2025-12-24 16:20:00 |"
+    },
+    {
+        "id": 85,
+        "name": "NTH_VALUE",
+        "description": "정렬된 그룹 내의 n번째 행에 있는 값을 반환합니다 (윈도우 함수).",
+        "example_query": "SELECT NTH_VALUE(val, 2) OVER (ORDER BY id) FROM table;",
+        "example_result": "| Result |\n| :--- |\n| SecondVal |"
+    },
+    {
+        "id": 86,
+        "name": "NTILE",
+        "description": "정렬된 그룹의 행을 지정된 개수의 그룹으로 나눕니다.",
+        "example_query": "SELECT NTILE(4) OVER (ORDER BY score DESC) FROM results;",
+        "example_result": "| Quadrant |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 87,
+        "name": "NULLIF",
+        "description": "두 식이 같으면 NULL을, 다르면 첫 번째 식을 반환합니다.",
+        "example_query": "SELECT NULLIF(1, 1);",
+        "example_result": "| Result |\n| :--- |\n| NULL |"
+    },
+    {
+        "id": 88,
+        "name": "NVL",
+        "description": "값이 NULL인 경우 지정된 다른 값으로 대체합니다 (Oracle 스타일).",
+        "example_query": "SELECT NVL(NULL, 'Default');",
+        "example_result": "| Result |\n| :--- |\n| Default |"
+    },
+    {
+        "id": 89,
+        "name": "OBJECT_AGG",
+        "description": "키와 값을 기반으로 하나의 객체를 생성합니다.",
+        "example_query": "SELECT OBJECT_AGG(key, value) FROM table;",
+        "example_result": "| Result |\n| :--- |\n| { \"k1\": \"v1\", \"k2\": \"v2\" } |"
+    },
+    {
+        "id": 90,
+        "name": "OBJECT_CONSTRUCT",
+        "description": "키-값 쌍 목록으로부터 객체를 생성합니다.",
+        "example_query": "SELECT OBJECT_CONSTRUCT('a', 1, 'b', 'two');",
+        "example_result": "| Result |\n| :--- |\n| { \"a\": 1, \"b\": \"two\" } |"
+    },
+    {
+        "id": 91,
+        "name": "PARSE_JSON",
+        "description": "문자열을 JSON 데이터 형식으로 변환합니다.",
+        "example_query": "SELECT PARSE_JSON('{\"id\": 1}');",
+        "example_result": "| Result |\n| :--- |\n| { \"id\": 1 } |"
+    },
+    {
+        "id": 92,
+        "name": "PARSE_XML",
+        "description": "문자열을 XML 데이터 형식으로 변환합니다.",
+        "example_query": "SELECT PARSE_XML('<root>data</root>');",
+        "example_result": "| Result |\n| :--- |\n| <root>data</root> |"
+    },
+    {
+        "id": 93,
+        "name": "PI",
+        "description": "원주율(pi) 값을 반환합니다.",
+        "example_query": "SELECT PI();",
+        "example_result": "| PI() |\n| :--- |\n| 3.1415926535 |"
+    },
+    {
+        "id": 94,
+        "name": "POSITION",
+        "description": "부분 문자열이 처음 나타나는 위치를 반환합니다.",
+        "example_query": "SELECT POSITION('a', 'banana');",
+        "example_result": "| Pos |\n| :--- |\n| 2 |"
+    },
+    {
+        "id": 95,
+        "name": "POW",
+        "description": "숫자의 거듭제곱을 계산합니다.",
+        "example_query": "SELECT POW(2, 3);",
+        "example_result": "| Result |\n| :--- |\n| 8 |"
+    },
+    {
+        "id": 96,
+        "name": "PREVIOUS_DAY",
+        "description": "지정된 요일의 이전 날짜를 반환합니다.",
+        "example_query": "SELECT PREVIOUS_DAY('2025-01-01', 'Monday');",
+        "example_result": "| Result |\n| :--- |\n| 2024-12-30 |"
+    },
+    {
+        "id": 97,
+        "name": "QUARTER",
+        "description": "날짜의 분기(1-4)를 반환합니다.",
+        "example_query": "SELECT QUARTER('2025-12-24');",
+        "example_result": "| Result |\n| :--- |\n| 4 |"
+    },
+    {
+        "id": 98,
+        "name": "RADIANS",
+        "description": "도(degrees) 단위를 라디안으로 변환합니다.",
+        "example_query": "SELECT RADIANS(180);",
+        "example_result": "| Result |\n| :--- |\n| 3.1415926535 |"
+    },
+    {
+        "id": 99,
+        "name": "RANDOM",
+        "description": "임의의 정수 값을 생성합니다.",
+        "example_query": "SELECT RANDOM();",
+        "example_result": "| Result |\n| :--- |\n| 4827193741 |"
+    },
+    {
+        "id": 100,
+        "name": "RANK",
+        "description": "그룹 내 정렬 순서에 따른 순위를 반환합니다 (동일 값은 동일 순위, 다음 순위 건너뜀).",
+        "example_query": "SELECT RANK() OVER (ORDER BY score DESC) FROM results;",
+        "example_result": "| Rank |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 101,
+        "name": "RATIO_TO_REPORT",
+        "description": "함계에 대한 값의 비율을 계산합니다 (윈도우 함수).",
+        "example_query": "SELECT val, RATIO_TO_REPORT(val) OVER () FROM table;",
+        "example_result": "| Val | Ratio |\n| :--- | :--- |\n| 25 | 0.25 |"
+    },
+    {
+        "id": 102,
+        "name": "REGEXP_COUNT",
+        "description": "문자열에서 정규 표현식 패턴이 나타나는 횟수를 반환합니다.",
+        "example_query": "SELECT REGEXP_COUNT('abc-123-def', '[0-9]+');",
+        "example_result": "| Result |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 103,
+        "name": "REGEXP_LIKE",
+        "description": "정규 표현식을 사용하여 패턴 매칭을 수행합니다.",
+        "example_query": "SELECT REGEXP_LIKE('123-456', '^[0-9-]+$');",
+        "example_result": "| Result |\n| :--- |\n| TRUE |"
+    },
+    {
+        "id": 104,
+        "name": "REGEXP_REPLACE",
+        "description": "정규 표현식 패턴에 맞는 부분을 다른 문자열로 대체합니다.",
+        "example_query": "SELECT REGEXP_REPLACE('Hi 123', '[0-9]+', 'NUM');",
+        "example_result": "| Result |\n| :--- |\n| Hi NUM |"
+    },
+    {
+        "id": 105,
+        "name": "REGEXP_SUBSTR",
+        "description": "정규 표현식 패턴에 맞는 부분 문자열을 추출합니다.",
+        "example_query": "SELECT REGEXP_SUBSTR('id:123', '[0-9]+');",
+        "example_result": "| Result |\n| :--- |\n| 123 |"
+    },
+    {
+        "id": 106,
+        "name": "REPEAT",
+        "description": "문자열을 지정된 횟수만큼 반복합니다.",
+        "example_query": "SELECT REPEAT('Abc', 3);",
+        "example_result": "| Result |\n| :--- |\n| AbcAbcAbc |"
+    },
+    {
+        "id": 107,
+        "name": "REPLACE",
+        "description": "문자열 내의 특정 부분을 다른 문자열로 대체합니다.",
+        "example_query": "SELECT REPLACE('Hi Tom', 'Tom', 'Bob');",
+        "example_result": "| Result |\n| :--- |\n| Hi Bob |"
+    },
+    {
+        "id": 108,
+        "name": "REVERSE",
+        "description": "문자열의 순서를 거꾸로 뒤집습니다.",
+        "example_query": "SELECT REVERSE('SQL');",
+        "example_result": "| Result |\n| :--- |\n| LQS |"
+    },
+    {
+        "id": 109,
+        "name": "RIGHT",
+        "description": "문자열의 오른쪽에서 지정된 개수만큼의 문자를 반환합니다.",
+        "example_query": "SELECT RIGHT('Snowflake', 4);",
+        "example_result": "| Result |\n| :--- |\n| lake |"
+    },
+    {
+        "id": 110,
+        "name": "ROUND",
+        "description": "숫자를 지정된 소수점 자리수로 반올림합니다.",
+        "example_query": "SELECT ROUND(123.456, 1);",
+        "example_result": "| Result |\n| :--- |\n| 123.5 |"
+    },
+    {
+        "id": 111,
+        "name": "ROW_NUMBER",
+        "description": "그룹 내 각 행에 고유한 일련번호를 부여합니다 (윈도우 함수).",
+        "example_query": "SELECT ROW_NUMBER() OVER (ORDER BY id) FROM table;",
+        "example_result": "| RowNum |\n| :--- |\n| 1 |"
+    },
+    {
+        "id": 112,
+        "name": "RPAD",
+        "description": "지정된 길이가 될 때까지 문자열의 오른쪽을 특정 문자로 채웁니다.",
+        "example_query": "SELECT RPAD('123', 5, '0');",
+        "example_result": "| Result |\n| :--- |\n| 12300 |"
+    },
+    {
+        "id": 113,
+        "name": "RTRIM",
+        "description": "문자열 오른쪽의 공백을 제거합니다.",
+        "example_query": "SELECT RTRIM('Text  ');",
+        "example_result": "| Result |\n| :--- |\n| Text |"
+    },
+    {
+        "id": 114,
+        "name": "SHA2",
+        "description": "입력값에 대한 SHA-2 (SHA-256, SHA-512 등) 해시 값을 계산합니다.",
+        "example_query": "SELECT SHA2('data', 256);",
+        "example_result": "| Result |\n| :--- |\n| d0e386... |"
+    },
+    {
+        "id": 115,
+        "name": "SIGN",
+        "description": "입력값의 부호를 반환합니다 (-1, 0, 1).",
+        "example_query": "SELECT SIGN(-50);",
+        "example_result": "| SIGN |\n| :--- |\n| -1 |"
+    },
+    {
+        "id": 116,
+        "name": "SIN",
+        "description": "입력값의 사인 값을 계산합니다.",
+        "example_query": "SELECT SIN(0);",
+        "example_result": "| SIN(0) |\n| :--- |\n| 0 |"
+    },
+    {
+        "id": 117,
+        "name": "SINH",
+        "description": "입력값의 쌍곡 사인 값을 계산합니다.",
+        "example_query": "SELECT SINH(0);",
+        "example_result": "| Result |\n| :--- |\n| 0 |"
+    },
+    {
+        "id": 118,
+        "name": "SPACE",
+        "description": "지정된 수만큼의 공백 문자를 반환합니다.",
+        "example_query": "SELECT SPACE(5);",
+        "example_result": "| Result |\n| :--- |\n| \"     \" |"
+    },
+    {
+        "id": 119,
+        "name": "SPLIT",
+        "description": "지정된 구분자를 사용하여 문자열을 배열로 나눕니다.",
+        "example_query": "SELECT SPLIT('a,b,c', ',');",
+        "example_result": "| Result |\n| :--- |\n| [\"a\", \"b\", \"c\"] |"
+    },
+    {
+        "id": 120,
+        "name": "SPLIT_PART",
+        "description": "문자열을 나누고 지정된 부분만 반환합니다.",
+        "example_query": "SELECT SPLIT_PART('a-b-c', '-', 2);",
+        "example_result": "| Result |\n| :--- |\n| b |"
+    },
+    {
+        "id": 121,
+        "name": "SQRT",
+        "description": "숫자의 제곱근을 계산합니다.",
+        "example_query": "SELECT SQRT(16);",
+        "example_result": "| SQRT(16) |\n| :--- |\n| 4 |"
+    },
+    {
+        "id": 122,
+        "name": "STDDEV",
+        "description": "그룹 내 값의 표준 편차를 계산합니다.",
+        "example_query": "SELECT STDDEV(score) FROM results;",
+        "example_result": "| STDDEV |\n| :--- |\n| 5.2 |"
+    },
+    {
+        "id": 123,
+        "name": "STARTS_WITH",
+        "description": "문자열이 특정 문자열로 시작하는지 여부를 반환합니다.",
+        "example_query": "SELECT STARTS_WITH('Snowflake', 'Snow');",
+        "example_result": "| Result |\n| :--- |\n| TRUE |"
+    },
+    {
+        "id": 124,
+        "name": "STRTOK",
+        "description": "문자열에서 토큰을 추출합니다.",
+        "example_query": "SELECT STRTOK('a:b:c', ':', 2);",
+        "example_result": "| Result |\n| :--- |\n| b |"
+    },
+    {
+        "id": 125,
+        "name": "SUBSTRING",
+        "description": "문자열의 일부분을 추출합니다.",
+        "example_query": "SELECT SUBSTRING('Wonderful', 1, 3);",
+        "example_result": "| Result |\n| :--- |\n| Won |"
+    },
+    {
+        "id": 126,
+        "name": "SUM",
+        "description": "그룹 내 값의 총합을 반환합니다.",
+        "example_query": "SELECT SUM(price) FROM orders;",
+        "example_result": "| SUM |\n| :--- |\n| 450000 |"
+    },
+    {
+        "id": 127,
+        "name": "TAN",
+        "description": "입력값의 탄젠트 값을 계산합니다.",
+        "example_query": "SELECT TAN(0);",
+        "example_result": "| TAN(0) |\n| :--- |\n| 0 |"
+    },
+    {
+        "id": 128,
+        "name": "TANH",
+        "description": "입력값의 쌍곡 탄젠트 값을 계산합니다.",
+        "example_query": "SELECT TANH(0);",
+        "example_result": "| Result |\n| :--- |\n| 0 |"
+    },
+    {
+        "id": 129,
+        "name": "TIME_SLICE",
+        "description": "타임스탬프를 일정 시간 단위(슬라이스)로 정렬합니다.",
+        "example_query": "SELECT TIME_SLICE(CURRENT_TIMESTAMP (), 5, 'minute');",
+        "example_result": "| Result |\n| :--- |\n| 2025-12-24 16:20:00 |"
+    },
+    {
+        "id": 130,
+        "name": "TO_ARRAY",
+        "description": "값을 배열 데이터 형식으로 변환합니다.",
+        "example_query": "SELECT TO_ARRAY(1);",
+        "example_result": "| Result |\n| :--- |\n| [1] |"
+    },
+    {
+        "id": 131,
+        "name": "TO_DATE",
+        "description": "표현식을 날짜 데이터 형식으로 변환합니다.",
+        "example_query": "SELECT TO_DATE('2025-01-01');",
+        "example_result": "| Result |\n| :--- |\n| 2025-01-01 |"
+    },
+    {
+        "id": 132,
+        "name": "TO_JSON",
+        "description": "값을 JSON 문자열로 변환합니다.",
+        "example_query": "SELECT TO_JSON(ARRAY_CONSTRUCT(1, 2));",
+        "example_result": "| Result |\n| :--- |\n| \"[1,2]\" |"
+    },
+    {
+        "id": 133,
+        "name": "TO_NUMBER",
+        "description": "표현식을 숫자 데이터 형식으로 변환합니다.",
+        "example_query": "SELECT TO_NUMBER('123.45');",
+        "example_result": "| Result |\n| :--- |\n| 123.45 |"
+    },
+    {
+        "id": 134,
+        "name": "TO_OBJECT",
+        "description": "값을 객체 데이터 형식으로 변환합니다.",
+        "example_query": "SELECT TO_OBJECT(PARSE_JSON('{\"a\":1}'));",
+        "example_result": "| Result |\n| :--- |\n| { \"a\": 1 } |"
+    },
+    {
+        "id": 135,
+        "name": "TO_TIMESTAMP",
+        "description": "표현식을 타임스탬프 데이터 형식으로 변환합니다.",
+        "example_query": "SELECT TO_TIMESTAMP('2025-01-01 12:00:00');",
+        "example_result": "| Result |\n| :--- |\n| 2025-01-01 12:00:00 |"
+    },
+    {
+        "id": 136,
+        "name": "TO_VARCHAR",
+        "description": "표현식을 문자열 데이터 형식으로 변환합니다.",
+        "example_query": "SELECT TO_VARCHAR(123);",
+        "example_result": "| Result |\n| :--- |\n| \"123\" |"
+    },
+    {
+        "id": 137,
+        "name": "TRANSLATE",
+        "description": "문자열 내의 특정 문자들을 일대일로 대응하는 다른 문자들로 변환합니다.",
+        "example_query": "SELECT TRANSLATE('ABC', 'AB', '12');",
+        "example_result": "| Result |\n| :--- |\n| 12C |"
+    },
+    {
+        "id": 138,
+        "name": "TRIM",
+        "description": "문자열 양쪽의 공백 또는 특정 문자를 제거합니다.",
+        "example_query": "SELECT TRIM('  SQL  ');",
+        "example_result": "| Result |\n| :--- |\n| SQL |"
+    },
+    {
+        "id": 139,
+        "name": "TRUNCATE",
+        "description": "숫자를 지정된 소수점 자리수 아래로 버립니다.",
+        "example_query": "SELECT TRUNCATE(123.456, 1);",
+        "example_result": "| Result |\n| :--- |\n| 123.4 |"
+    },
+    {
+        "id": 140,
+        "name": "TRY_CAST",
+        "description": "CAST를 시도하되, 실패 시 오류 대신 NULL을 반환합니다.",
+        "example_query": "SELECT TRY_CAST('abc' AS INT);",
+        "example_result": "| Result |\n| :--- |\n| NULL |"
+    },
+    {
+        "id": 141,
+        "name": "TRY_PARSE_JSON",
+        "description": "JSON 파싱을 시도하되, 실패 시 NULL을 반환합니다.",
+        "example_query": "SELECT TRY_PARSE_JSON('{bad}');",
+        "example_result": "| Result |\n| :--- |\n| NULL |"
+    },
+    {
+        "id": 142,
+        "name": "TRY_TO_DATE",
+        "description": "날짜 변환을 시도하되, 실패 시 NULL을 반환합니다.",
+        "example_query": "SELECT TRY_TO_DATE('invalid');",
+        "example_result": "| Result |\n| :--- |\n| NULL |"
+    },
+    {
+        "id": 143,
+        "name": "TRY_TO_NUMBER",
+        "description": "숫자 변환을 시도하되, 실패 시 NULL을 반환합니다.",
+        "example_query": "SELECT TRY_TO_NUMBER('abc');",
+        "example_result": "| Result |\n| :--- |\n| NULL |"
+    },
+    {
+        "id": 144,
+        "name": "TYPEOF",
+        "description": "값의 데이터 타입을 반환합니다.",
+        "example_query": "SELECT TYPEOF(123);",
+        "example_result": "| Result |\n| :--- |\n| INTEGER |"
+    },
+    {
+        "id": 145,
+        "name": "UNICODE",
+        "description": "문자열의 첫 번째 문자에 대한 유니코드 값(정수)을 반환합니다.",
+        "example_query": "SELECT UNICODE('가');",
+        "example_result": "| Result |\n| :--- |\n| 44032 |"
+    },
+    {
+        "id": 146,
+        "name": "UPPER",
+        "description": "문자열을 대문자로 변환합니다.",
+        "example_query": "SELECT UPPER('sql');",
+        "example_result": "| Result |\n| :--- |\n| SQL |"
+    },
+    {
+        "id": 147,
+        "name": "UUID_STRING",
+        "description": "무작위 UUID 문자열을 생성합니다.",
+        "example_query": "SELECT UUID_STRING();",
+        "example_result": "| Result |\n| :--- |\n| \"e0ab...\" |"
+    },
+    {
+        "id": 148,
+        "name": "VARIANCE",
+        "description": "그룹 내 값의 분산을 계산합니다.",
+        "example_query": "SELECT VARIANCE(score) FROM results;",
+        "example_result": "| VARIANCE |\n| :--- |\n| 27.04 |"
+    },
+    {
+        "id": 149,
+        "name": "WEEK",
+        "description": "날짜의 주 번호(1-53)를 반환합니다.",
+        "example_query": "SELECT WEEK('2025-12-24');",
+        "example_result": "| Result |\n| :--- |\n| 52 |"
+    },
+    {
+        "id": 150,
+        "name": "ZEROIFNULL",
+        "description": "값이 NULL인 경우 0을 반환하고, 그렇지 않으면 원래 값을 반환합니다.",
+        "example_query": "SELECT ZEROIFNULL(NULL);",
+        "example_result": "| Result |\n| :--- |\n| 0 |"
+    }
+]
