@@ -10,7 +10,8 @@
 ---
 
 ## 🚀 프로젝트 소개
-SQL 문법은 데이터베이스(MySQL, Oracle, PostgreSQL 등)마다 조금씩 달라 헷갈리기 쉽습니다. 이 프로젝트는 자주 사용되는 SQL 함수들을 정리하고 간단한 예제를 제공하여 개발 효율을 높이는 것을 목표로 합니다.
+* SQL 문법은 데이터베이스(MySQL, Oracle, PostgreSQL 등)마다 조금씩 달라 헷갈리기 쉽습니다. 이 프로젝트는 자주 사용되는 SQL 함수들을 정리하고 간단한 예제를 제공하여 개발 효율을 높이는 것을 목표로 합니다.
+* 현재는 범용 함수, PostgreSQL 함수만 제공
 
 ## 🛠 분류
 * **대분류**: 범용 함수, PostgreSQL 함수
@@ -22,9 +23,6 @@ SQL 문법은 데이터베이스(MySQL, Oracle, PostgreSQL 등)마다 조금씩 
 * **즐겨찾기**: 목록에서 즐겨찾기한 함수는 항상 최상단 노출
 * **접기/펴기**: 카테고리별 접기/펴기 가능
 * **상세정보**: 함수명 선택 시 예시 확인
-
-## 📄 라이선스
-이 프로젝트는 [MIT License](LICENSE)에 따라 배포됩니다.
 
 ---
 Created by <a href="https://github.com/leesk1283-github" target="_blank" rel="noopener noreferrer">leesk1283-github</a>
