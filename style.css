@@ -45,6 +45,8 @@ body {
 #search-input {
     width: 100%;
     padding: 0.8rem 1.2rem;
+    padding-right: 3rem;
+    /* Space for the clear button */
     border-radius: 12px;
     border: 1px solid var(--border-color);
     background: rgba(15, 23, 42, 0.6);
@@ -52,6 +54,30 @@ body {
     font-size: 1rem;
     outline: none;
     transition: all var(--transition-speed);
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+    transition: color var(--transition-speed);
+}
+
+.clear-btn:hover {
+    color: var(--accent-color);
 }
 
 #search-input:focus {

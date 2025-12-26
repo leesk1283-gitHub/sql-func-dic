@@ -177,6 +177,14 @@ document.addEventListener('DOMContentLoaded', () => {
         renderAllFunctions(filtered);
     });
 
+    // 4.1 Clear Search
+    const clearSearchBtn = document.getElementById('clear-search');
+    clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        renderAllFunctions(functionsData);
+        searchInput.focus();
+    });
+
     // 5. Favorites Toggle
     document.addEventListener('click', (e) => {
         const starBtn = e.target.closest('.star-btn');
